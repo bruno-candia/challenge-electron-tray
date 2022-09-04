@@ -2,7 +2,7 @@ const { resolve } = require('path')
 const { app, Menu, Tray } = require('electron');
 
 app.on('ready', () => {
-  const tray = new Tray(resolve(__dirname, 'assets', 'tray-icon.png'));
+  const tray = new Tray(resolve(__dirname, 'assets', 'iconTemplate.png'));
 
   const contextMenu = Menu.buildFromTemplate([
     {
