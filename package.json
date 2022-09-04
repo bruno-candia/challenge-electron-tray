@@ -1,0 +1,14 @@
+{
+  "name": "challenge-electron-tray",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/bruno-candia/challenge-electron-tray.git",
+  "author": "Bruno Costa Candia <bruno852812@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^20.1.1"
+  }
+}
