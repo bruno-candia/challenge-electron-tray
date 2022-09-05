@@ -35,29 +35,13 @@ function render() {
       {
         label: 'Abrir Pasta',
         click: () => {
-          spawn('explorer', [project.path], {
-            cwd: process.cwd(),
-            env: {
-              PATH: process.env.PATH,
-            },
-            stdio: 'inherit',
-          });
-          // shell.openExternal(`start ${project.path}`);
-          // spawn('explorer', [project.path], { stdio: 'inherit' });
+          spawn('explorer', [project.path], { shell: true });
         },
       },
       {
         label: 'Abrir com VS Code',
         click: () => {
-          spawn('code', [project.path], {
-            cwd: process.cwd(),
-            env: {
-              PATH: process.env.PATH,
-            },
-            stdio: 'inherit',
-          });
-          // shell.openExternal(`start ${project.path}`);
-          // spawn('explorer', [project.path], { stdio: 'inherit' });
+          spawn('code', [project.path], { shell: true });
         },
       },
       {
