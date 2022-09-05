@@ -1,13 +1,10 @@
 const { resolve, basename } = require('path');
 const {
-  app, Menu, Tray, dialog, MenuItem, shell,
+  app, Menu, Tray, dialog,
 } = require('electron');
 const Store = require('electron-store');
 const { spawn } = require('child_process');
 const Sentry = require('@sentry/electron');
-// const fixPath = require('fix-path');
-
-// fixPath();
 
 Sentry.init({ dsn: 'https://ea5b377ae04142fd8d1a898646e88860@o1395043.ingest.sentry.io/6717501' });
 
