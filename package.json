@@ -1,14 +1,33 @@
 {
-  "name": "challenge-electron-tray",
+  "name": "code-tray",
+  "description": "Open Favorite files from tray menu.",
   "version": "1.0.0",
   "main": "main.js",
   "repository": "https://github.com/bruno-candia/challenge-electron-tray.git",
   "author": "Bruno Costa Candia <bruno852812@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
-    "electron": "^20.1.1"
+    "@sentry/electron": "^4.0.0",
+    "child-process": "^1.0.2",
+    "cross-spawn": "^7.0.3",
+    "electron-store": "^8.1.0",
+    "fix-path": "^4.0.0"
+  },
+  "devDependencies": {
+    "child-process": "^1.0.2",
+    "electron": "^20.1.1",
+    "electron-builder": "^23.3.3",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  },
+  "build": {
+    "productName": "Code Tray"
   }
 }
